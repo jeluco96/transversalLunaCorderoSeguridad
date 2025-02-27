@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>Bandas</title>
+
+	</head>
+	<body>
+	    <h2>Lista de Bandas</h2>
+	    <table border ="2">
+	        <thead>
+	            <tr>
+	                <th>Nombre</th>
+	                <th>Tipo</th>
+	                <th>Número de Componentes</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr th:each="banda : ${bandas}">
+	                <td th:text="${banda.nombre}">Nombre de la Banda</td>
+	                <td th:text="${banda.tipo}">Tipo</td>
+	                <td th:text="${banda.numComponentes}">0</td>
+	            </tr>
+	        </tbody>
+	    </table>
+	</body>
+	</html>
